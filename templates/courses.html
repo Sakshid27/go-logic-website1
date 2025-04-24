@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Go Logic Institute</title>
+    <script src="{{ url_for('static', filename='courses.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='courses.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='gologo.png') }}" alt="Go Logic Logo" class="logo">
+            </a>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/courses" class="nav-link">Courses</a></li>
+            <li><a href="/testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="/about" class="nav-link">About Us</a></li>
+            <li><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- First Slider Section - Design Courses -->
+    <div class="slider-section">
+        <div class="section-header">
+            <h1>Design Courses</h1>
+            <p>Master the tools that bring your creative visions to life</p>
+        </div>
+        <div class="slider">
+            <div class="item">
+                <div class="img"><img src="static/LogoFolder/autocad.png" alt="Autocad" draggable="false"></div>
+                <h2>Autocad</h2>
+                <span>Professional CAD Design</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="static/LogoFolder/catia.png" alt="Catia" draggable="false"></div>
+                <h2>Catia</h2>
+                <span>Advanced 3D Modeling</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="static/LogoFolder/sketchup.png" alt="SketchUp" draggable="false"></div>
+                <h2>Google SketchUp</h2>
+                <span>3D Design Simplified</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="static/LogoFolder/3dmax.png" alt="3Ds Max" draggable="false"></div>
+                <h2>3Ds Max</h2>
+                <span>3D Animation & Rendering</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="InDesign" draggable="false"></div>
+                <h2>InDesign</h2>
+                <span>Professional Layout Design</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Photoshop" draggable="false"></div>
+                <h2>Photo Shop</h2>
+                <span>Image Editing Mastery</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Illustrator" draggable="false"></div>
+                <h2>Illustrator</h2>
+                <span>Vector Graphics Design</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Corel Draw" draggable="false"></div>
+                <h2>Corel Draw</h2>
+                <span>Graphic Design Suite</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+            
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+    </div>
+
+    <hr class="fancy-hr">
+
+    <!-- Second Slider Section - Development Courses -->
+    <div class="slider-section">
+        <div class="section-header">
+            <h1>Development Courses</h1>
+            <p>Build powerful applications and websites with our programming courses</p>
+        </div>
+        <div class="slider slider-large">
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Python" draggable="false"></div>
+                <h2>Python Programming</h2>
+                <span>Versatile and Powerful</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="JavaScript" draggable="false"></div>
+                <h2>JavaScript</h2>
+                <span>Web Development Essential</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="React" draggable="false"></div>
+                <h2>React JS</h2>
+                <span>Frontend Framework</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Node.js" draggable="false"></div>
+                <h2>Node.js</h2>
+                <span>Backend Development</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Django" draggable="false"></div>
+                <h2>Django</h2>
+                <span>Python Web Framework</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Flutter" draggable="false"></div>
+                <h2>Flutter</h2>
+                <span>Cross-platform App Development</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="Java" draggable="false"></div>
+                <h2>Java</h2>
+                <span>Enterprise Applications</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+
+            <div class="item">
+                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="C++" draggable="false"></div>
+                <h2>C++</h2>
+                <span>System Programming</span>
+                <button class="button-85" role="button">Learn More</button>
+            </div>
+            
+            <button id="next2"><i class="fa-solid fa-angle-right"></i></button>
+            <button id="prev2"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+    </div>
+
+    <script>
+        window.chatbaseConfig = {
+            chatbotId: "XzJjAnCVXmHi8XR-82Ruw",
+            openChatByDefault: false
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="XzJjAnCVXmHi8XR-82Ruw" defer></script>
+</body>
+</html>

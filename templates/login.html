@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Go Logic Institute</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #dbeafe, #1e3a8a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .login-container button {
+      flex: 1;
+      padding: 12px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .login-button {
+      background: #1e40af;
+    }
+
+    .login-button:hover {
+      background: #1d4ed8;
+    }
+
+    .register-button {
+      background: #10b981;
+    }
+
+    .register-button:hover {
+      background: #059669;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #1e40af;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .error-msg {
+      color: red;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    {% if error %}
+      <p class="error-msg">{{ error }}</p>
+    {% endif %}
+    <form action="/login" method="post">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        
+        <div class="button-group">
+          <button type="submit" class="login-button">Login</button>
+          <button type="button" class="register-button" onclick="window.location.href='register.html'">Register</button>
+        </div>
+      </form>
+      
+    <a href="/" class="back-link">← Back to Home</a>
+  </div>
+</body>
+</html>

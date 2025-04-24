@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Go Logic Institute</title>
+    <link rel="icon" href="{{ url_for('static', filename='LogoFolder/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}"> -->
+    
+
+
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="LearnYard is one of the leading platforms to learn Computer Science skills. Master essential data structures and algorithms, and crack your dream job with LearnYard."
+    />
+
+    <!-- OG Tags for Social Media Sharing (Facebook, Twitter, etc.) -->
+    <meta property="og:title" content="LearnYard | Code, Create, Conquer." />
+    <meta
+      property="og:description"
+      content="LearnYard is one of the leading platforms to learn Computer Science skills. Master essential data structures and algorithms, and crack your dream job with LearnYard."
+    />
+    
+    <meta property="og:url" content="https://learnyard.com/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/img/favicon.png"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/css/tailwind.css"
+    />
+
+   
+
+
+
+
+
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+          <a href="/">
+              <img src="{{ url_for('static', filename='gologo.png') }}" alt="Go Logic Logo" class="logo">
+          </a>
+      </div>
+      <ul class="navbar-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/courses" class="nav-link">Courses</a></li>
+          <li><a href="/testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="/about" class="nav-link">About Us</a></li>
+          <li><a href="/contact" class="nav-link">Contact</a></li>
+      </ul>
+  </nav>
+
+
+    <div class="video_box">
+      <section class="relative overflow-hidden py-6 md:pt-7 md:pb-8 home-hero">
+        
+        
+        <div id="home-hero-bg" class="absolute inset-0 w-full h-full pointer-events-none">
+          <dotlottie-player
+            autoplay
+            loop
+            mode="normal"
+            src="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/img/hero-bg.lottie">
+          </dotlottie-player>
+        </div>
+    
+        <!-- Flex container to position elements -->
+        <div class="w-full flex justify-between items-center">
+          
+          <!-- Left Content (You can add text here) -->
+          <div class="leftcontent">
+            
+            <h1>Shaping</h1>
+            <p> </p>
+            <h3>Ideas with</h3>
+            <p> </p>
+            <h2>Code & Creativity</h2>
+          </div>
+    
+          <!-- Video on the Right Side -->
+          <div class="w-full md:w-[45%] ml-auto">
+            <div class="mt-[50px] lg:mt-0 overflow-hidden dark:mix-blend-screen mix-blend-multiply"
+              style="transform: translate3d(0, 0, 0)">
+              <video class="w-full scale-[1.01] hero-video safari_only"
+                poster="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/img/earth-light.webp"
+                autoplay loop muted playsinline>
+                <source class="hero-video-src"
+                  src="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/img/hero-globe.webm"
+                  type="video/webm" />
+                <source class="hero-video-src"
+                  src="https://d3fu8elvld6rb5.cloudfront.net/learnyard.com/img/hero-globe.mp4"
+                  type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          
+        </div>
+    
+        
+      </section>
+    </div>
+    
+
+<section class="testimonials-section">
+    <h2>What Our Students Say</h2>
+    <div class="testimonials-container">
+        <!-- Testimonial Card 1 -->
+        <div class="testimonial-card">
+            <div class="testimonial-photo">
+                <img src="{{ url_for('static', filename='Students photos/shruti.png') }}" alt="Student Photo">
+            </div>
+            <div class="testimonial-content">
+                <p>"The Python course was amazing! The instructors were knowledgeable and always helpful."</p>
+                <p class="student-name">- Shruti Yadav</p>
+            </div>
+            <div class="video-overlay">
+                <video class="testimonial-video" autoplay muted loop>
+                    <source src="{{ url_for('static', filename='Students photos/shruti video.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="testimonial-card">
+            <div class="testimonial-photo">
+                <img src="{{ url_for('static', filename='Students photos/tanish.png') }}" alt="Student Photo">
+            </div>
+            <div class="testimonial-content">
+                <p>"I loved the hands-on approach of the Java course. It made me confident in my coding skills."</p>
+                <p class="student-name">- Tanish Sharma</p>
+            </div>
+            <div class="video-overlay">
+                <video class="testimonial-video" autoplay muted loop>
+                    <source src="{{ url_for('static', filename='Students photos/tanish video.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+
+        <!-- Testimonial Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-photo">
+              <img src="{{ url_for('static', filename='Students photos/vedant photo.png') }}" alt="Student Photo">
+          </div>
+          <div class="testimonial-content">
+              <p>"Course was really great so the faculty, I learned to solve real world problems"</p>
+              <p class="student-name">- Vedant Patil</p>
+          </div>
+          <div class="video-overlay">
+              <video class="testimonial-video" autoplay muted loop>
+                  <source src="{{ url_for('static', filename='Students photos/vedant video.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </div>
+
+        <!-- Add more cards as needed -->
+    </div>
+</section>
+<script>
+        window.chatbaseConfig = {
+            chatbotId: "XzJjAnCVXmHi8XR-82Ruw",
+            openChatByDefault: false
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="XzJjAnCVXmHi8XR-82Ruw" defer></script>
+</body>
+</html>

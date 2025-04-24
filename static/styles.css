@@ -1,0 +1,585 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(16, 10, 65); /* Transparent background */
+    z-index: 10; /* Ensures navbar stays on top of slider */
+    padding: 10px 0;
+    transition: background 0.3s ease-in-out;
+  }
+  
+
+  /* Slider Styles */
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height for the slider */
+    overflow: hidden;
+  }
+  
+  .slides-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images cover the entire slider area */
+  }
+  
+  /* Navigation Arrows */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    z-index: 5;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Dots */
+  .dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active, .dot:hover {
+    background: white;
+  }
+  
+/* Logo Space Section */
+.logo-space {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo-space h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-item {
+  width: 100px;  /* Smaller size */
+  height: 100px; /* Smaller size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;  /* Circular tile */
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+  overflow: hidden;  /* Ensure images stay within the circle */
+}
+
+.logo-item:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #333) grayscale(0);
+}
+
+/* Specific Styles for Logo Images */
+.logo-item img {
+  width: 100%;   /* Ensure the image fills the circle */
+  height: 100%;  /* Ensure the image fills the circle */
+  object-fit: contain;  /* Ensure the entire image is visible */
+  border-radius: inherit;  /* Ensure image stays circular */
+}
+
+/*------------------------------------- Courses wale page ki styling ---------------------------------------*/
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+
+
+/* .courses {
+  margin-top: 80px;
+  padding: 80px;
+  text-align: center;
+} 
+
+.course-list {
+  
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.course-card {
+  width: calc(25% - 20px);
+  min-width: 250px;
+
+border: black;
+
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 20px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 0px;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.course-card h2 {
+  color: #012970;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.course-card p {
+  color: #333;
+  font-size: 14px;
+  padding-bottom: 100px;
+}
+
+.course-card button {
+  
+    background: rgb(1, 1, 82);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto; 
+    margin-bottom: 10px;
+}
+
+.course-card button:hover {
+  background: rgb(0, 0, 120);
+}
+
+
+
+.course-card img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+} */
+
+/* Course Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Slider Track */
+.course-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Course Card Styling */
+.course-card {
+  min-width: 300px;
+  max-width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.course-card button {
+  background: rgb(1, 1, 82);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.course-card button:hover {
+  background: rgb(0, 0, 120);
+}
+
+/* Navigation Arrows */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+
+
+/* ------------------------------------------------- Testimonials Styling -------------------------------------------------------- */
+
+        /* Add custom styles here for easier reference */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .video_box {
+    position: relative;
+    height: 90vh;
+    justify-content: right;
+    z-index: 1; /* Ensures content is above */
+}
+
+.video_box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("{{ url_for('static', filename='background images/hexagon1.webp') }}") center/cover no-repeat;
+    opacity: 0.1; /* Adjust transparency */
+    z-index: -1; /* Keeps it behind content */
+}
+
+
+
+        .testimonials-section {
+            /* padding: 150px; */
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .testimonials-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .testimonial-card {
+            position: relative;
+            width: 300px;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .testimonials-section h2{
+          font-size: 2rem;
+          color: rgb(9, 2, 70);
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-photo {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto 10px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #6c63ff;
+        }
+
+        .testimonial-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-content {
+            padding: 20px;
+        }
+
+        .testimonial-content p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-content .student-name {
+            font-weight: bold;
+            color: #6c63ff;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .testimonial-card:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .testimonial-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-video video {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        
+
+
+
+  .loader-wrapper {
+        transform: translate(520px, 45vh) translate3d(0px, 0px, 0px) scale(3);
+        /* margin-left: 50%; */
+
+        display: inline-flex;
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .page-loaded .loader-main {
+        background-color: transparent !important;
+        pointer-events: none;
+        transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-delay: 0.8s;
+      }
+
+      .page-loaded .loader-wrapper {
+        transform: translate(0px, 0vh) translate3d(0px, 0px, 0px) scale(1);
+        padding-top: 24px;
+      }
+      .page-loaded .loader-wrapper > a {
+        opacity: 0;
+        transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-delay: 1.2s;
+      }
+
+      button.banner-close-btn {
+        padding: 8px;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 6px;
+      }
+
+      button.banner-close-btn:hover {
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      @media (max-width: 1300px) {
+        .loader-wrapper {
+          transform: translate(-50%, 45vh) translate3d(0px, 0px, 0px) scale(3);
+          margin-left: 50%;
+        }
+        .page-loaded .loader-wrapper {
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 1280px) {
+        .mobile-loader-wrapper {
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        .page-loaded .mobile-loader-wrapper {
+          animation: loadermobile 2s ease-out 1 forwards;
+        }
+        .page-loaded .loader-main {
+          transition: 0.6s ease-out;
+          opacity: 0;
+          transition-delay: 1.5s;
+        }
+      }
+
+      @keyframes loadermobile {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+
+        40% {
+          transform: scale(1.3);
+          opacity: 1;
+        }
+
+        60% {
+          transform: scale(1.3);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(3);
+          opacity: 0;
+        }
+      }
+      /* Wrapper for the layout */
+
+
+      .leftcontent{
+        position: top;
+        margin-left: 50px;
+        color: black;
+        font-size: 1.5rem;
+      }
+
+      /* Left content on first section */
+      .leftcontent h1 {
+       margin-left: 10%;
+        max-width: 500px;
+        width: 100%;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 12%, rgba(0,212,255,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           
+            font-weight: bold;
+            
+          font-size: 7rem;
+
+            
+      }
+      .leftcontent h2 {
+        margin-left: 10%;
+        max-width: 500px;
+        width: 100%;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(20,1,99,1) 0%, rgba(90,1,145,1) 31%, rgba(255,0,231,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           
+            font-weight: bold;
+            font-size: 3.5rem;
+            
+      }
+      .leftcontent h3 {
+        margin-left: 10%;
+        max-width: 500px;
+        width: 100%;
+        z-index: 1;
+        font-size: 3rem;
+        
+        background: linear-gradient(90deg, rgba(1,15,99,1) 0%, rgba(255,1,155,1) 30%, rgba(255,20,0,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           
+            font-weight: bold;
+      }
+
+
+  /* General Reset */

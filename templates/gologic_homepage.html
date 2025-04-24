@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Logic Institute Dhule</title>
+
+  <link rel="icon" href="{{ url_for('static', filename='LogoFolder/favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+
+  
+</head>
+<body>
+
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-xl-11 d-flex align-items-center justify-content-between">
+        <nav class="navbar">
+          <div class="logo-container">
+            <a href="/">
+              <img src="{{ url_for('static', filename='gologo.png') }}" alt="Go Logic Logo" class="logo">
+            </a>
+          </div>
+
+          <ul class="navbar-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/courses" class="nav-link">Courses</a></li>
+            <li><a href="/testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="/about" class="nav-link">About Us</a></li>
+            <li><a href="/contact" class="nav-link">Contact</a></li>
+
+            {% if not user %}
+              <li><a href="{{ url_for('login') }}" class="nav-link">Login</a></li>
+              <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
+            {% else %}
+              <li class="profile-dropdown">
+                <img src="{{ url_for('static', filename='user_default.png') }}" alt="Profile" class="profile-pic" onclick="toggleDropdown()">
+                <div id="dropdown" class="dropdown-content">
+                  <p><strong>{{ user }}</strong></p>
+                  <p>Email: {{ email }}</p>
+                  <p>Course: {{ course }}</p>
+                  <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+                </div>
+              </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Slider Section -->
+<div class="slider">
+  <div class="slides-container">
+    <div class="slide fade">
+      <img src="{{ url_for('static', filename='final images/img1.jpg') }}" alt="Slide 1">
+    </div>
+    <div class="slide fade">
+      <img src="{{ url_for('static', filename='final images/img2.jpg') }}" alt="Slide 2">
+    </div>
+    <div class="slide fade">
+      <img src="{{ url_for('static', filename='final images/img3.PNG') }}" alt="Slide 3">
+    </div>
+  </div>
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+
+<!-- Logo Section -->
+<section class="logo-space">
+  <h2>Our Courses</h2>
+  <div class="logo-grid">
+    <div class="logo-item"><img src="{{ url_for('static', filename='LogoFolder/3dmax.png') }}" alt="3D Max"></div>
+    <div class="logo-item"><img src="{{ url_for('static', filename='LogoFolder/autocad.png') }}" alt="AutoCAD"></div>
+    <div class="logo-item"><img src="{{ url_for('static', filename='LogoFolder/c++.png') }}" alt="C++"></div>
+    <div class="logo-item"><img src="{{ url_for('static', filename='LogoFolder/python.png') }}" alt="Python"></div>
+    <div class="logo-item"><img src="{{ url_for('static', filename='LogoFolder/java.png') }}" alt="Java"></div>
+    <div class="logo-item"><img src="{{ url_for('static', filename='LogoFolder/sketchup.png') }}" alt="SketchUp"></div>
+    <div class="logo-item"><img src="{{ url_for('static', filename='LogoFolder/catia.png') }}" alt="Catia"></div>
+  </div>
+</section>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 5000);
+  }
+
+  function changeSlide(n) {
+    slideIndex += n - 1;
+    showSlides();
+  }
+
+  function currentSlide(n) {
+    slideIndex = n - 1;
+    showSlides();
+  }
+
+  function toggleDropdown() {
+    const dropdown = document.getElementById("dropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  window.onclick = function (event) {
+    if (!event.target.matches('.profile-pic')) {
+      const dropdown = document.getElementById("dropdown");
+      if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      }
+    }
+  }
+</script>
+<script>
+        window.chatbaseConfig = {
+            chatbotId: "XzJjAnCVXmHi8XR-82Ruw",
+            openChatByDefault: false
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="XzJjAnCVXmHi8XR-82Ruw" defer></script>
+  
+</body>
+</html>
